@@ -1,0 +1,33 @@
+@font-face {
+    font-family: pt-serif;
+    src: url(PTSerif-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: pt-serif;
+    src: url(PTSerif-Regular.ttf);
+    font-weight: normal;
+}
+
+:root{
+    --main-color: rgb(0,91,0);
+    --normal-font: pt-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    color: #f0f0f0;
+    background-color: var(--main-color);
+    font-family: var(--normal-font);
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
