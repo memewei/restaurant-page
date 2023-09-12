@@ -3,7 +3,7 @@ function createDishes(){
     dishes.classList.add("dishes");
 
     dishes.appendChild(
-        createDish("Arugula Roll", "Fresh arugula, bathing in spicy sauce and resting in a tortilla wrap", 150, 67)
+        createDish("Arugula Rolls", "Fresh arugula, bathing in spicy sauce and resting in a tortilla wrap", 150, 67)
     );
     dishes.appendChild(
         createDish("Autumn Dew Drop Juice", "The flavour of the mountain, contained in a single drink!", 128, 57)
@@ -32,7 +32,7 @@ function createDish(name, description, energy, health){
     dishHealth.textContent = health;
 
     const dishImage = document.createElement("img");
-    dishImage.src = `dist/images/dishes/${name.toLowerCase()}.jpeg`;
+    dishImage.src = `images/dishes/${name.toLowerCase()}.png`;
     dishImage.alt = `${name}`;
 
     dish.appendChild(dishName);
