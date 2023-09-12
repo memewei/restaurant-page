@@ -3,7 +3,7 @@ function createPika(){
     pika.classList.add("home");
 
     const pikaPortrait = document.createElement("img");
-    pikaPortrait.src = "images/pika-portrait.jpeg";
+    pikaPortrait.src = "dist/images/pika-portrait.jpeg";
     pikaPortrait.alt = "Pika";
 
     pika.appendChild(createPara("Aloha! You must have followed your nose!"));

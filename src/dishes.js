@@ -32,7 +32,7 @@ function createDish(name, description, energy, health){
     dishHealth.textContent = health;
 
     const dishImage = document.createElement("img");
-    dishImage.src = `images/dishes/${name.toLowerCase()}.jpeg`;
+    dishImage.src = `dist/images/dishes/${name.toLowerCase()}.jpeg`;
     dishImage.alt = `${name}`;
 
     dish.appendChild(dishName);
