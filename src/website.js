@@ -1,4 +1,4 @@
-import loadPika from "./pika";
+import loadHome from "./pika";
 import loadDishes from "./dishes";
 import loadRecipes from "./recipes";
 
@@ -7,7 +7,7 @@ function createHeader(){
     header.classList.add("header");
 
     const restaurantName = document.createElement("h1");
-    restaurantName.classList.add("restarant-name");
+    restaurantName.classList.add("restaurant-name");
     restaurantName.textContent = "Pika's Restaurant";
 
     header.appendChild(restaurantName);
@@ -19,13 +19,13 @@ function createHeader(){
 function createNav(){
     const nav = document.createElement("nav");
 
-    const pikaButton = document.createElement("button");
-    pikaButton.classList.add("button-nav");
-    pikaButton.textContent = "Pika";
-    pikaButton.addEventListener("click", (e)=>{
+    const homeButton = document.createElement("button");
+    homeButton.classList.add("button-nav");
+    homeButton.textContent = "Home";
+    homeButton.addEventListener("click", (e)=>{
         if(e.target.classList.contains("active")) return;
-        setActiveButton(pikaButton);
-        loadPika();
+        setActiveButton(homeButton);
+        loadHome();
     });
 
     const dishesButton = document.createElement("button");
@@ -46,7 +46,7 @@ function createNav(){
         loadRecipes();
     })
 
-    nav.appendChild(pikaButton);
+    nav.appendChild(homeButton);
     nav.appendChild(dishesButton);
     nav.appendChild(recipesButton);
 
@@ -78,7 +78,7 @@ function createFooter(){
     const copyrightText = document.createElement("p");
     copyrightText.textContent = `Copyright © ${new Date().getFullYear()} memewei`;
 
-    const githubLink = document.createElement("i");
+    const githubLink = document.createElement("a");
     githubLink.href = "https://github.com/memewei";
 
     const githubIcon = document.createElement("i");
@@ -99,7 +99,7 @@ function initializePage(){
     content.appendChild(createFooter());
 
     setActiveButton(document.querySelector(".button-nav"));
-    loadPika();
+    loadHome();
 }
 
 export default initializePage;

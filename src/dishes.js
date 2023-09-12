@@ -26,17 +26,19 @@ function createDish(name, description, energy, health){
     dishDesc.textContent = description;
 
     const dishEnergy = document.createElement("p");
+    dishEnergy.classList.add("stats");
     dishEnergy.textContent = energy;
 
     const dishHealth = document.createElement("p");
+    dishHealth.classList.add("stats");
     dishHealth.textContent = health;
 
     const dishImage = document.createElement("img");
     dishImage.src = `images/dishes/${name.toLowerCase()}.png`;
     dishImage.alt = `${name}`;
 
-    dish.appendChild(dishName);
     dish.appendChild(dishImage);
+    dish.appendChild(dishName);
     dish.appendChild(dishDesc);
     dish.appendChild(dishEnergy);
     dish.appendChild(dishHealth);

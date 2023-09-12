@@ -1,4 +1,4 @@
-function createPika(){
+function createHome(){
     const pika = document.createElement("div");
     pika.classList.add("home");
 
@@ -6,10 +6,15 @@ function createPika(){
     pikaPortrait.src = "images/pika-portrait.jpeg";
     pikaPortrait.alt = "Pika";
 
+    const restaurant = document.createElement("img");
+    restaurant.src = "images/pika's\ restaurant.jpeg";
+    restaurant.alt = "Pika's Restaurant";
+
     pika.appendChild(createPara("Aloha! You must have followed your nose!"));
     pika.appendChild(createPara("I'm Pika."));
     pika.appendChild(pikaPortrait);
     pika.appendChild(createPara("I own Pika's, an outdoor restaurant in the heart of the village."));
+    pika.appendChild(restaurant);
 
     return pika;
 }
@@ -20,10 +25,10 @@ function createPara(text){
     return para;
 }
 
-function loadPika(){
+function loadHome(){
     const main = document.getElementById("main");
     main.textContent = "";
-    main.appendChild(createPika());
+    main.appendChild(createHome());
 }
 
-export default loadPika;
+export default loadHome;

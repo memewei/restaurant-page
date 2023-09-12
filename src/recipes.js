@@ -22,20 +22,30 @@ function createRecipe(name, ingredient1, quantity1, ingredient2, quantity2, ingr
     const recipeName = document.createElement("h2");
     recipeName.textContent = name;
 
-    const ing1 = document.createElement("p");
-    ing1.textContent = ingredient1;
+    const ingredients = document.createElement("div");
+    ingredients.classList.add("ingredients");
+
+    const ing1 = document.createElement("div");
+    ing1.classList.add("ingredient");
+    const ing2 = document.createElement("div");
+    ing2.classList.add("ingredient");
+    const ing3 = document.createElement("div");
+    ing3.classList.add("ingredient");
+
+    const ing1Name = document.createElement("p");
+    ing1Name.textContent = ingredient1;
 
     const qtIng1 = document.createElement("p");
     qtIng1.textContent = quantity1;
 
-    const ing2 = document.createElement("p");
-    ing2.textContent = ingredient2;
+    const ing2Name = document.createElement("p");
+    ing2Name.textContent = ingredient2;
 
     const qtIng2 = document.createElement("p");
     qtIng2.textContent = quantity2;
 
-    const ing3 = document.createElement("p");
-    ing3.textContent = ingredient3;
+    const ing3Name = document.createElement("p");
+    ing3Name.textContent = ingredient3;
 
     const qtIng3 = document.createElement("p");
     qtIng3.textContent = quantity3;
@@ -56,17 +66,21 @@ function createRecipe(name, ingredient1, quantity1, ingredient2, quantity2, ingr
     ing3Image.src = `images/dishes/ingredients/${ingredient3.toLowerCase()}.png`;
     ing3Image.alt = `${ingredient3}`;
 
-    recipe.appendChild(recipeName);
+    ing1.appendChild(ing1Image);
+    ing1.appendChild(ing1Name);
+    ing1.appendChild(qtIng1);
+    ing2.appendChild(ing2Image);
+    ing2.appendChild(ing2Name);
+    ing2.appendChild(qtIng2);
+    ing3.appendChild(ing3Image);
+    ing3.appendChild(ing3Name);
+    ing3.appendChild(qtIng3);
     recipe.appendChild(recipeImage);
-    recipe.appendChild(ing1Image);
-    recipe.appendChild(ing1);
-    recipe.appendChild(qtIng1);
-    recipe.appendChild(ing2Image);
-    recipe.appendChild(ing2);
-    recipe.appendChild(qtIng2);
-    recipe.appendChild(ing3Image);
-    recipe.appendChild(ing3);
-    recipe.appendChild(qtIng3);
+    recipe.appendChild(recipeName);
+    ingredients.appendChild(ing1);
+    ingredients.appendChild(ing2);
+    ingredients.appendChild(ing3);
+    recipe.appendChild(ingredients);
 
     return recipe;
 }
