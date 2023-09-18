@@ -1,4 +1,5 @@
 # restaurant-page
+[Live Demo](https://memewei.github.io/restaurant-page/)
 
 Website created with HTML, JavaScript and CSS
 
